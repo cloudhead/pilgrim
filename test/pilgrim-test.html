@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>pilgrim</title>
+    <script src="../lib/pilgrim.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var client = new(pilgrim.Client)("google.com");
+
+      client.resource('badgers').id(42).get()();
+      client.resource('badgers').id(42).getXML()();
+    </script>
+  </body>
+</html>

@@ -6,10 +6,14 @@
   </head>
   <body>
     <script type="text/javascript">
-      var client = new(pilgrim.Client)("google.com");
+      var client1 = new(pilgrim.Client)("google.com"),
+          client2 = new(pilgrim.Client)("wikipedia.org");
 
-      client.resource('badgers').id(42).get()();
-      client.resource('badgers').id(42).getXML()();
+      client1.resource('badgers').id(42).get()();
+      client1.resource('badgers').id(42).resource('homes').id(66).get()();
+      client1.resource('badgers').id(42).getXML()();
+
+      client2.resource('rabbits').id(61).get()();
     </script>
   </body>
 </html>
